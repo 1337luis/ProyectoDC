@@ -51,3 +51,12 @@ main {
 .libSelector #l1 { background-color: #ed225d }
 .libSelector #l2 { background-color: darkred }
 .libSelector #l3 { background-color: #00b9fd }
+
+
+/* Estilos index Parallax.js */
+.taskSelector {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 80%;
+	margin: 0 auto;
+}
