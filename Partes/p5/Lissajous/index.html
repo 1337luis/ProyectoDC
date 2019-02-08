@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curvas de Lissajous</title>
     <style>
-		body {padding: 0; margin: 0; font-family: sans-serif;}
+		body {padding: 0; margin: 0; font-family: sans-serif;overflow-x: hidden;}
 		canvas { margin: 0 calc((100% - 640px) / 2);}
-		.opts{ display: grid; grid-template-columns: repeat(6, 1fr); column-gap: 2px}
+		.opts{ display: grid; grid-template-columns: repeat(7, 1fr); column-gap: 2px}
 		button {
 			border: 1px solid lightgray;
 			background-color: lightgray;
@@ -39,6 +39,7 @@
 		<button id="c34">Curva(3, 4)</button>
 		<button id="c32">Curva(3, 2)</button>
 		<button id="c12">Curva(1, 2)</button>
+		<button id="c11">Curva(1, 1)</button>
 	  </div>
   </body>
   <script>
@@ -76,6 +77,10 @@
 				break;
 			case "c12":
 				vA = 1; vB = 2;
+				startDrawing();
+				break;
+			case "c11":
+				vA = 1; vB = 1;
 				startDrawing();
 				break;
 		}
