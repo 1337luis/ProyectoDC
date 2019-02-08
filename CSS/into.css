@@ -1,0 +1,21 @@
+body {
+	font-family: sans-serif;
+}
+header {
+	padding: 10px;
+	background-color: #313131;
+	color: white;
+	width: 100%;
+	margin: -5px -10px 0 -10px;
+}
+header img {
+	width: 48px;
+	height: 48px;
+	transition: 0.3s;
+	filter: grayscale(100%);
+	margin-left: 20px;
+}
+
+header img:hover {
+	filter: none;
+}
