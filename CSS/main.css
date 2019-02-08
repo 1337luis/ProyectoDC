@@ -33,16 +33,16 @@ main {
 	margin: 0 auto;
 }
 
-.libSelector a {text-decoration: none;}
+.libSelector a, .taskSelector a {text-decoration: none;}
 
-.libSelector .lib {
+.libSelector .lib, .taskSelector .task {
 	color: white;
 	font-size: 2em;
 	text-align: center;
 	padding: 60px 5px;
 	transition: 0.2s;
 }
-.libSelector .lib:hover {
+.libSelector .lib:hover, .taskSelector .task {
 	transform: scale(1.1);
 	box-shadow: 2px 2px 6px black;
 }
@@ -57,6 +57,14 @@ main {
 .taskSelector {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	width: 80%;
+	grid-column-gap: 100px;
+	width: 50%;
 	margin: 0 auto;
 }
+
+.taskSelector .task{
+	box-shadow: 5px;
+}
+
+.taskSelector #t1 { background-color: darkslategrey }
+.taskSelector #t2 { background-color: darkslategrey }
