@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Sencilla</title>
+    <style>
+		body {padding: 0; margin: 0; font-family: sans-serif;}
+	</style>
+    <link rel="stylesheet" href="../../../CSS/main.css"/>
+    <link rel="stylesheet" href="../../../CSS/into.css"/>
+    <script src="../../../JS/parallax.js"></script>
+  </head>
+  <body>
+	  <header>
+        <nav>
+          <a href="../index.html"><img src="../../../IMG/back.png" alt="Inicio"/></a>
+		  <a href="../../../index.html"><img src="../../../IMG/home.png" alt="Inicio"/></a>
+        </nav>
+          <h3>Tarea Sencilla con Parallax</h3>
+	  </header>
+      <main>
+  		<div class="content">
+            <div id="scene">
+                <div data-depth="0.2">Primer layer</div>
+                <div data-depth="0.6">Segundo Layer</div>
+            </div>
+  		</div>
+  	</main>
+  </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", iniciar);
+
+        function iniciar (){
+            var scene = document.getElementById('scene');
+            var parallaxInstance = new Parallax(scene, {
+              relativeInput: true
+            });
+        }
+
+    </script>
+
+</html>
+</html>
