@@ -6,6 +6,18 @@
     <title>Curvas de Lissajous</title>
     <style>
 		body {padding: 0; margin: 0; font-family: sans-serif;}
+		canvas { margin: 0 calc((100% - 640px) / 2);}
+		.opts{ display: grid; grid-template-columns: repeat(6, 1fr); column-gap: 2px}
+		button {
+			border: 1px solid lightgray;
+			background-color: lightgray;
+			padding: 2px;
+			transition: 0.3s;
+		}
+		button:hover {
+			background-color: darkcyan;
+			color: white;
+		}
 	</style>
     <script src="../../../JS/p5.js"></script>
 	<link rel="stylesheet" href="../../../CSS/into.css">
@@ -16,9 +28,67 @@
 	  <header>
         <nav>
 			<a href="../index.html"><img src="../../../IMG/back.png" alt="Inicio"/></a>
-  		  <a href="../../../index.html"><img src="../../../IMG/home.png" alt="Inicio"/></a>
+  		  	<a href="../../../index.html"><img src="../../../IMG/home.png" alt="Inicio"/></a>
         </nav>
           <h3>Curvas de Lissajous</h3>
 	  </header>
+	  <div class="opts">
+	  	<button id="c98">Curva(9, 8)</button>
+		<button id="c56">Curva(5, 6)</button>
+		<button id="c54">Curva(5, 4)</button>
+		<button id="c34">Curva(3, 4)</button>
+		<button id="c32">Curva(3, 2)</button>
+		<button id="c12">Curva(1, 2)</button>
+	  </div>
   </body>
+  <script>
+  	window.addEventListener("load", init);
+	function init()
+	{
+		var buttons = document.getElementsByTagName("button");
+		for( var x = 0; x < buttons.length; x++ )
+			buttons[x].addEventListener("click", buttonAction);
+	}
+
+	function buttonAction( e )
+	{
+		switch( e.target.id )
+		{
+			case "c98":
+				vA = 9; vB = 8;
+				startDrawing();
+				break;
+			case "c56":
+				vA = 5; vB = 6;
+				startDrawing();
+				break;
+			case "c54":
+				vA = 5; vB = 4;
+				startDrawing();
+				break;
+			case "c34":
+				vA = 3; vB = 4;
+				startDrawing();
+				break;
+			case "c32":
+				vA = 3; vB = 2;
+				startDrawing();
+				break;
+			case "c12":
+				vA = 1; vB = 2;
+				startDrawing();
+				break;
+		}
+	}
+
+	function startDrawing()
+	{
+		isDrawing = false;
+		clear();
+		loops = 0;
+		a = 0;
+		b = 0;
+		isDrawing = true;
+	}
+  </script>
 </html>
