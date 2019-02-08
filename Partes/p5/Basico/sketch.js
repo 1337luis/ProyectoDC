@@ -1,7 +1,17 @@
-function setup() {
-  // put setup code here
+function setup()
+{
+  createCanvas(600, 600, WEBGL);
 }
 
-function draw() {
-  // put drawing code here
+function draw()
+{
+	smooth();
+  background(255);
+
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  stroke(255,0,255); fill(0,255,0);
+  box(300);
+  stroke(0,255,255); fill( 255,0,0 );
+  sphere(215);
 }
