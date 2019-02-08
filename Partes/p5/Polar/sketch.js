@@ -1,8 +1,10 @@
 var drawing = true;
 function setup()
 {
-  createCanvas(400, 400);
+  createCanvas(640, 480);
+  translate(width / 2, height / 2);
   drawRose(8, 5);
+
 }
 
 
@@ -10,7 +12,7 @@ function drawRose( n, d )
 {
 	clear();
 	var k = n / d;
-    translate(width / 2, height / 2);
+
     beginShape();
     stroke(0);
     noFill();
