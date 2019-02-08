@@ -3,7 +3,9 @@ body {
 	background-color: #313131;
 	overflow: hidden;
 }
-
+canvas {
+	margin: 0 auto;
+}
 header {
 	background-color: lightgray;
 	color: black;
