@@ -70,3 +70,12 @@ main {
 
 .taskSelector #t1 { background-color: darkslategrey }
 .taskSelector #t2 { background-color: darkslategrey }
+
+.scene {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: inline-block;
+}

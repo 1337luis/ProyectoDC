@@ -21,10 +21,23 @@
 	  </header>
       <main>
   		<div class="content">
-            <div id="scene">
-                <div data-depth="0.2">Primer layer</div>
-                <div data-depth="0.6">Segundo Layer</div>
+            <div class="container">
+              <div id="scene" class="scene border" data-input-element="#scene-input">
+                <div data-depth="1.00"><img src="../../../IMG/parallaxIMGS/simple Scene/layer1.png"></div>
+                <div data-depth-x="0.80" data-depth-y="-0.80"><img src="../../../IMG/parallaxIMGS/simple Scene/layer2.png"></div>
+                <div data-depth-x="-0.60" data-depth-y="0.60"><img src="../../../IMG/parallaxIMGS/simple Scene/layer3.png"></div>
+                <div data-depth-x="0.40" data-depth-y="-0.40"><img src="../../../IMG/parallaxIMGS/simple Scene/layer4.png"></div>
+                <div data-depth-x="-0.20" data-depth-y="-0.20"><img src="../../../IMG/parallaxIMGS/simple Scene/layer5.png"></div>
+                <div data-depth-x="0.00" data-depth-y="-0.00"><img src="../../../IMG/parallaxIMGS/simple Scene/layer6.png"></div>
+              </div>
             </div>
+
+            <div class="container">
+              <div id="scene-input" class="scene border">
+                <div><img src="../../../IMG/parallaxIMGS/simple Scene/layer6.png"></div>
+              </div>
+            </div>
+
   		</div>
   	</main>
   </body>
@@ -33,9 +46,13 @@
         document.addEventListener("DOMContentLoaded", iniciar);
 
         function iniciar (){
-            var scene = document.getElementById('scene');
+            var escena = document.getElementById('scene');
+            var inputEscena = document.getElementById('scene-input');
+
             var parallaxInstance = new Parallax(scene, {
-              relativeInput: true
+              relativeInput: true,
+              hoverOnly: true,
+              inputElement: inputEscena
             });
         }
 
