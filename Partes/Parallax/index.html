@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Index</title>
     <style>
-		body {padding: 0; margin: 0; font-family: sans-serif;}
+		body {padding: 0; margin: 0; font-family: sans-serif; overflow: hidden;}
+        .exSelector {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+			height: calc(100vh - 80px);
+		}
+		.ex {
+			text-align: center;
+			vertical-align: middle;
+			color: white;
+			text-decoration: none;
+			font-size: 3em;
+			transition: 0.3s;
+			padding-top: 40vh;
+		}
+		.ex:hover {
+			filter: opacity(0.90);
+		}
+
+        #t1{ background-color: #35682d }
+		#t2{ background-color: #00b9fd }
 	</style>
-    <link rel="stylesheet" href="../../CSS/main.css"/>
     <link rel="stylesheet" href="../../CSS/into.css"/>
   </head>
   <body>
@@ -16,15 +36,12 @@
           <a href="../../index.html"><img src="../../IMG/back.png" alt="Inicio"/></a>
 		  <a href="../../index.html"><img src="../../IMG/home.png" alt="Inicio"/></a>
         </nav>
-          <h3>Inicio Parallax </h3>
+          <h3>Inicio Parallax.JS</h3>
 	  </header>
       <main>
-  		<div class="content">
-  			<h2>Ejemplos realizados:</h2>
-  			<div class="taskSelector">
-  				<a href="tareaSencilla/index.html" class="task" id="t1">Escena Sencilla</a>
-  				<a href="tareaCompleja/index.html" class="task" id="t2">Escena Compleja</a>
-  			</div>
+  		<div class="exSelector">
+			<a href="tareaSencilla/index.html" class="ex" id="t1">Escena Sencilla</a>
+			<a href="tareaCompleja/index.html" class="ex" id="t2">Escena Compleja</a>
   		</div>
   	</main>
   </body>

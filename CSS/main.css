@@ -55,22 +55,7 @@ main {
 .libSelector #l3 { background-color: #00b9fd }
 
 
-/* Estilos index Parallax.js */
-.taskSelector {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 100px;
-	width: 50%;
-	margin: 0 auto;
-}
-
-.taskSelector .task{
-	box-shadow: 5px;
-}
-
-.taskSelector #t1 { background-color: darkslategrey }
-.taskSelector #t2 { background-color: darkslategrey }
-
+/* Estilos Parallax.js */
 .scene {
 	margin: 0;
 	padding: 0;
