@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Compleja</title>
+    <style>
+		body {padding: 0; margin: 0; font-family: sans-serif;}
+
+        #container {
+            background-image: url("../../../IMG/parallaxIMGS/complexScene/fondoEspacio.jpg");
+            max-height: 100%;
+            height: 400px;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            padding: 5%;
+            overflow: hidden;
+            background-size: center;
+        }
+
+        #container .scene img {
+          display: inline-block;
+          width: 100%;
+        }
+
+        #container .layer:nth-child(1){
+          width: 250px;
+        }
+
+        #container .layer:nth-child(2){
+          width: 200px;
+        }
+	</style>
+    <link rel="stylesheet" href="../../../CSS/into.css"/>
+    <script src="../../../JS/parallax.js"></script>
+  </head>
+  <body>
+	  <header>
+        <nav>
+          <a href="../index.html"><img src="../../../IMG/back.png" alt="Inicio"/></a>
+		  <a href="../../../index.html"><img src="../../../IMG/home.png" alt="Inicio"/></a>
+        </nav>
+          <h3>Escena Compleja con Parallax</h3>
+	  </header>
+      <main>
+  		<div class="content">
+            <div id="container" class="container">
+              <ul class="scene">
+                  <li class="layer" data-depth="0.30"><img src="../../../IMG/parallaxIMGS/complexScene/astronauta.png"></li>
+                  <li class="layer" data-depth="0.70"><img src="../../../IMG/parallaxIMGS/complexScene/astronauta2.png"></li>
+              </ul>
+            </div>
+  		</div>
+  	</main>
+  </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", iniciar);
+
+        function iniciar (){
+
+        }
+
+    </script>
+
+</html>
+</html>
