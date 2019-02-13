@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Three Index</title>
-</head>
-<body>
-
-</body>
+    <title>P5.JS</title>
+	<link rel="shortcut icon" href="../../favicon.png">
+    <style>
+		body {padding: 0; margin: 0; font-family: sans-serif; overflow: hidden;}
+		.exSelector {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+			height: calc(100vh - 80px);
+		}
+		.ex {
+			text-align: center;
+			vertical-align: middle;
+			color: white;
+			text-decoration: none;
+			font-size: 3em;
+			transition: 0.3s;
+			padding-top: 40vh;
+		}
+		.ex:hover {
+			filter: opacity(0.90);
+		}
+		#p1{ background-color: #35682d }
+		#p2{ background-color: #00b9fd }
+	</style>
+	<link rel="stylesheet" href="../../CSS/into.css">
+  </head>
+  <body>
+	<header>
+		<nav>
+			<a href="../../index.html"><img src="../../IMG/back.png" alt="Atrás"/></a>
+			<a href="../../index.html"><img src="../../IMG/home.png" alt="Inicio"/></a>
+		</nav>
+		<h3>Inicio Three.JS</h3>
+	</header>
+	  <main>
+		  <div class="exSelector">
+			  <a href="./Cubo/index.html" id="p1" class="ex">Cubo 3D</a>
+			  <a href="./Escena/index.html" id="p2" class="ex">Escena 3D Compleja</a>
+		  </div>
+	  </main>
+  </body>
 </html>

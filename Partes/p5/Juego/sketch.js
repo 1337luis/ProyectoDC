@@ -39,6 +39,7 @@ function draw()
 			ecB = random( 255 );
 			enemFloor = random( 1000 ) > 500 ? true : false;
 			if( velocity < 25 ) velocity += 2;
+			points += 10;
 		}
 		//COLISIONES
 		if( enemPosX > 30 && enemPosX < 65 && enemFloor == floor )
@@ -48,6 +49,10 @@ function draw()
 		fill( 0 );
 		rect( 0, HEIGHT - HEIGHT / 3, WIDTH, HEIGHT ); //SUELO
 		rect( 0, 0, WIDTH, HEIGHT / 3 ); //TECHO
+
+		//MOSTRAR PUNTUACIÓN
+		fill( 255 );
+		text( points, 5, 5, 20, 200 );
 	}
 
 }

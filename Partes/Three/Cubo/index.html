@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo 3D</title>
+    <style>
+	body {padding: 0; margin: 0; font-family: sans-serif;overflow-x: hidden; background-color: black;}
+	canvas { margin: 0 auto;}
+	</style>
+    <script src="../../../JS/p5.js"></script>
+	<link rel="stylesheet" href="../../../CSS/into.css">
+	<link rel="shortcut icon" href="../../../favicon.png">
+  </head>
+  <body>
+	  <header>
+        <nav>
+			<a href="../index.html"><img src="../../../IMG/back.png" alt="Inicio"/></a>
+  		  <a href="../../../index.html"><img src="../../../IMG/home.png" alt="Inicio"/></a>
+        </nav>
+          <h3>Cubo 3D</h3>
+	  </header>
+	  <script src="../../../JS/three.js"></script>
+		<script>
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+		</script>
+  </body>
+</html>
