@@ -8,29 +8,100 @@
 		body {padding: 0; margin: 0; font-family: sans-serif; overflow-x: hidden;}
 
         #container {
-            background-image: url("../../../IMG/parallaxIMGS/complexScene/fondoEspacio.jpg");
-            max-height: 100%;
-            height: 400px;
+            background-color: black;
+            min-height: 650px;
+            height: 100%;
             width: 100%;
             position: relative;
             margin: 0 auto;
-            padding: 5%;
             overflow: hidden;
-            background-size: center;
+            background-size: cover;
+        }
+
+        .tierra {
+            height: 100%;
+            width: 120%;
+            left: -5% !important;
+            top: 13em !important;
+            display: block;
+
+            animation-name: tierra;
+            animation-duration: 100s;
+            animation-fill-mode: backwards;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
 
         #container .scene img {
-          display: inline-block;
+          display: inline;
           width: 100%;
         }
 
-        #container .layer:nth-child(1){
-          width: 250px;
+        #container .astronauta{
+          width: 150px;
+          top: 10% !important;
+          left: 15% !important;
         }
 
-        #container .layer:nth-child(2){
-          width: 200px;
+        #container .astronauta2{
+          width: 300px;
+          top: 30% !important;
+          left: 40% !important;
         }
+
+        #container .nave{
+          width: 350px;
+          position: relative;
+          right: 100%;
+          left: 70% !important;
+
+          animation-name: nave;
+          animation-duration: 10s;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        #container .estrellas {
+            animation-name: estrellas;
+            animation-duration: 100s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes tierra {
+            from {
+               transform: translateX(-5%);
+            }
+
+            to {
+               transform: translateX();
+            }
+        }
+
+        @keyframes estrellas {
+            from {
+               transform: translateY(-5%);
+            }
+
+            to {
+               transform: translateY();
+            }
+        }
+
+        @keyframes nave {
+            from {
+               transform: translateY();
+               transform: translateX();
+            }
+
+            to {
+               transform: translateY(-5%);
+               transform: translateX(-5%);
+            }
+        }
+
 	</style>
     <link rel="stylesheet" href="../../../CSS/into.css"/>
     <script src="../../../JS/parallax.js"></script>
@@ -46,23 +117,32 @@
       <main>
   		<div class="content">
             <div id="container" class="container">
-              <ul class="scene">
-                  <li class="layer" data-depth="0.30"><img src="../../../IMG/parallaxIMGS/complexScene/astronauta.png"></li>
-                  <li class="layer" data-depth="0.70"><img src="../../../IMG/parallaxIMGS/complexScene/astronauta2.png"></li>
+              <ul class="scene" id="scene">
+                  <li class="layer estrellas" data-depth="0.20"><img src="../../../IMG/parallaxIMGS/complexScene/stars1.png"></li>
+                  <li class="layer estrellas" data-depth="0.20"><img src="../../../IMG/parallaxIMGS/complexScene/stars2.png"></li>
+                  <li class="layer tierra" data-depth="0.10"><img src="../../../IMG/parallaxIMGS/complexScene/tierra.png"></li>
+                  <li class="layer astronauta" data-depth="0.30"><img src="../../../IMG/parallaxIMGS/complexScene/astronauta.png"></li>
+                  <li class="layer astronauta2" data-depth="0.70"><img src="../../../IMG/parallaxIMGS/complexScene/astronauta2.png"></li>
+                  <li class="layer nave" data-depth="0.30"><img src="../../../IMG/parallaxIMGS/complexScene/naveEspacial.png"></li>
               </ul>
             </div>
   		</div>
   	</main>
   </body>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", iniciar);
+  <script>
+      document.addEventListener("DOMContentLoaded", iniciar);
 
-        function iniciar (){
+      function iniciar (){
+          var escena = document.getElementById('scene');
 
-        }
+          var parallaxInstance = new Parallax(escena, {
+            relativeInput: true,
+            hoverOnly: true,
+          });
+      }
 
-    </script>
+  </script>
 
 </html>
 </html>
