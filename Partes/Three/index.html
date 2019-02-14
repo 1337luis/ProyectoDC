@@ -22,11 +22,21 @@
 			transition: 0.3s;
 			padding-top: 40vh;
 		}
-		.ex:hover {
+		.ex2 {
+			text-align: center;
+			vertical-align: middle;
+			color: white;
+			text-decoration: none;
+			font-size: 3em;
+			transition: 0.3s;
+			padding-top: 20vh;
+		}
+		.ex:hover, .ex2:hover {
 			filter: opacity(0.90);
 		}
 		#p1{ background-color: #35682d }
 		#p2{ background-color: #00b9fd }
+		#p3{ background-color: #414141 }
 	</style>
 	<link rel="stylesheet" href="../../CSS/into.css">
   </head>
@@ -40,7 +50,10 @@
 	</header>
 	  <main>
 		  <div class="exSelector">
-			  <a href="./Cubo/index.html" id="p1" class="ex">Cubo 3D</a>
+			 <div class="exSelectorIn" style="display: grid; grid-template-columns: 1fr">
+			  	<a href="./Cubo/index.html" id="p1" class="ex2">Cubo 3D</a>
+				<a href="./Trueno/index.html" id="p3" class="ex2">AE86 Trueno</a>
+		  	</div>
 			  <a href="./Escena/index.html" id="p2" class="ex">Escena 3D Compleja</a>
 		  </div>
 	  </main>
