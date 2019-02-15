@@ -32,15 +32,39 @@
             animation-iteration-count: infinite;
         }
 
+        .luna {
+            left: 1% !important;
+            top: 13em !important;
+            width: 100%;
+            display: block !important;
+        }
+
+        .luna img {
+            width: 5% !important;
+            animation-name: rotar;
+            animation-duration: 100s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
         #container .scene img {
           display: inline;
           width: 100%;
         }
 
-        #container .astronauta{
+        #container .astronauta {
           width: 150px;
           top: 10% !important;
           left: 15% !important;
+        }
+
+        .astronauta img {
+            animation-name: flotar;
+            animation-duration: 30s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
 
         #container .astronauta2{
@@ -49,22 +73,37 @@
           left: 40% !important;
         }
 
+        .astronauta2 img {
+            animation-name: flotar;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
         #container .nave{
           width: 350px;
           position: relative;
           right: 100%;
           left: 70% !important;
+        }
 
-          animation-name: nave;
-          animation-duration: 10s;
-          animation-fill-mode: forwards;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
+        .nave img {
+            animation-name: flotar;
+            animation-duration: 30s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
 
         #container .estrellas {
-            animation-name: estrellas;
-            animation-duration: 100s;
+            top: -5% !important;
+            left: -5% !important;
+        }
+
+        .estrellas img {
+            animation-name: flotar;
+            animation-duration: 50s;
             animation-fill-mode: forwards;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
@@ -80,26 +119,63 @@
             }
         }
 
-        @keyframes estrellas {
+        @keyframes flotar {
             from {
-               transform: translateY(-5%);
-            }
-
-            to {
-               transform: translateY();
-            }
+        		transform: rotate(0deg)
+        		           translate(-10px)
+        		           rotate(0deg);
+        	}
+        	to {
+        		transform: rotate(360deg)
+        		           translate(-10px)
+        		           rotate(-360deg);
+        	}
         }
 
-        @keyframes nave {
-            from {
-               transform: translateY();
-               transform: translateX();
+        @keyframes rotar {
+            0% {
+        		transform: translate();
+        	}
+
+            10% {
+                transform: translate(20vh, -20px);
             }
 
-            to {
-               transform: translateY(-5%);
-               transform: translateX(-5%);
+            20% {
+                transform: translate(40vh, -40px);
             }
+
+            30% {
+                transform: translate(60vh, -60px);
+            }
+
+            40% {
+                transform: translate(80vh, -80px);
+            }
+
+            50% {
+                transform: translate(100vh, -100px);
+            }
+
+            60% {
+                transform: translate(120vh, -80px);
+            }
+
+            70% {
+                transform: translate(140vh, -60px);
+            }
+
+            80% {
+                transform: translate(160vh, -40px);
+            }
+
+            90% {
+                transform: translate(180vh, -20px);
+            }
+
+        	100% {
+                transform: translate(220vh, 0px);
+        	}
         }
 
 	</style>
@@ -118,9 +194,12 @@
   		<div class="content">
             <div id="container" class="container">
               <ul class="scene" id="scene">
-                  <li class="layer estrellas" data-depth="0.20"><img src="../../../IMG/parallaxIMGS/complexScene/stars1.png"></li>
+                  <li class="layer estrellas" data-depth="0.20">
+                      <img src="../../../IMG/parallaxIMGS/complexScene/stars1.png">
+                  </li>
                   <li class="layer estrellas" data-depth="0.20"><img src="../../../IMG/parallaxIMGS/complexScene/stars2.png"></li>
-                  <li class="layer tierra" data-depth="0.10"><img src="../../../IMG/parallaxIMGS/complexScene/tierra.png"></li>
+                  <li class="layer tierra" data-depth="0.40"><img src="../../../IMG/parallaxIMGS/complexScene/tierra.png"></li>
+                  <li class="layer luna" data-depth="0.20"><img src="../../../IMG/parallaxIMGS/complexScene/luna.png"></li>
                   <li class="layer astronauta" data-depth="0.30"><img src="../../../IMG/parallaxIMGS/complexScene/astronauta.png"></li>
                   <li class="layer astronauta2" data-depth="0.70"><img src="../../../IMG/parallaxIMGS/complexScene/astronauta2.png"></li>
                   <li class="layer nave" data-depth="0.30"><img src="../../../IMG/parallaxIMGS/complexScene/naveEspacial.png"></li>
