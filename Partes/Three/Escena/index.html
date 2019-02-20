@@ -4,6 +4,7 @@
 		<title>Escena Compleja 3D</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="shortcut icon" href="../../../favicon.png">
 		<style>
 			body {
 				background:#777;
@@ -22,7 +23,7 @@
 
 		<script>
 
-			if ( WEBGL.isWebGLAvailable() === false ) 
+			if ( WEBGL.isWebGLAvailable() === false )
 				document.body.appendChild( WEBGL.getWebGLErrorMessage() );
 
 			var container;
@@ -39,7 +40,7 @@
 			init();
 			animate();
 
-			function init() 
+			function init()
 			{
 
 				container = document.createElement( 'div' );
@@ -54,12 +55,12 @@
 					.load( [ 'px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png' ] );
 
 				var geometry = new THREE.SphereBufferGeometry( 100, 32, 16 );
-				var material = new THREE.MeshBasicMaterial( { 
-					color: 0xffffff, 
-					envMap: scene.background 
+				var material = new THREE.MeshBasicMaterial( {
+					color: 0xffffff,
+					envMap: scene.background
 				});
 
-				for ( var i = 0; i < 500; i ++ ) 
+				for ( var i = 0; i < 500; i ++ )
 				{
 					var mesh = new THREE.Mesh( geometry, material );
 
@@ -83,7 +84,7 @@
 
 			}
 
-			function onWindowResize() 
+			function onWindowResize()
 			{
 
 				windowHalfX = window.innerWidth / 2;
@@ -96,7 +97,7 @@
 
 			}
 
-			function onDocumentMouseMove( event ) 
+			function onDocumentMouseMove( event )
 			{
 				mouseX = ( event.clientX - windowHalfX ) * 15;
 				mouseY = ( event.clientY - windowHalfY ) * 15;
@@ -104,17 +105,17 @@
 			}
 
 
-			function animate() 
+			function animate()
 			{
 				requestAnimationFrame( animate );
 				render();
 			}
 
-			function render() 
+			function render()
 			{
 				var timer = 0.0001 * Date.now();
 
-				for ( var i = 0, il = spheres.length; i < il; i ++ ) 
+				for ( var i = 0, il = spheres.length; i < il; i ++ )
 				{
 					var sphere = spheres[ i ];
 
